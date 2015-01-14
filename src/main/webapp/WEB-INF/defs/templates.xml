@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<definition name="site.mainLayout" template="/WEB-INF/views/template.jsp">
+		<put-attribute name="title" value="RestFul API Demo" />
+		<put-attribute name="header" value="/WEB-INF/views/top.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
+	</definition>
+
+
+	<!-- 重新整理 Start -->
+	<definition name="employeeList" extends="site.mainLayout">
+		<put-attribute name="body" value="/WEB-INF/views/employee/employeeList.jsp" />
+	</definition>	
+	<definition name="employee" extends="site.mainLayout">
+		<put-attribute name="body" value="/WEB-INF/views/employee/employee.jsp" />
+	</definition>	
+	<definition name="newEmployee" extends="site.mainLayout">
+		<put-attribute name="body" value="/WEB-INF/views/employee/newEmployee.jsp" />
+	</definition>	
+	<definition name="updateEmployee" extends="site.mainLayout">
+		<put-attribute name="body" value="/WEB-INF/views/employee/editEmployee.jsp" />
+	</definition>	
+</tiles-definitions>
